@@ -1,9 +1,9 @@
 const HelloController = (app) => {
   app.get('/hello', (req, res) => {
-    res.send('Life is good!')
+    res.send('wawaweeea')
   })
   app.get('/', (req, res) => {
-    res.send('Welcome to Full Stack Development!')
+    res.send('IS4800-backend!')
   })
 }
 export default HelloController;
