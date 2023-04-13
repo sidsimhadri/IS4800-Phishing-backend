@@ -1,4 +1,11 @@
 import * as dataDao from "./data-dao.js"
+
+const dataController = (app) => {
+ app.post('/api/logs', createInteraction);
+ app.get('/api/logs', findInteractions);
+}
+
+
 const createInteraction = async (req, res) => {
   console.log(req.body);
   const newInteraction = req.body;
@@ -15,7 +22,5 @@ const findInteractions = async (req, res) => {
    res.json(data);
    
 }
-export default (app) => {
- app.post('/api/logs', createInteraction);
- app.get('/api/logs', findInteractions);
-}
+
+export default dataController
